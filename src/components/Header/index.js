@@ -1,25 +1,21 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+
+
+import logo from './assets/logo3.png';
+import './style.css';
 
 class Header extends Component {
-
   render() {
     return (
-      <div>
-        <h1>Header</h1>
-        <div><small>Fixinity / {this.props.currentPage} / <span onClick={() => this.props.setPage('device')}>Device</span> / Profile</small></div>
+      <div className="header-component">
+        <div className="container">
+          <a href="/"><img src={logo} alt="logo" className="logo" /></a>
+        </div>
+
       </div>
     );
   }
 }
 
-Header.propTypes = {
-  currentPage: PropTypes.string,
-  setPage: PropTypes.func.isRequired,
-};
-
-Header.defaultProps = {
-  currentPage: 'HOMEPAGE'
-};
-
 export default Header;
+
